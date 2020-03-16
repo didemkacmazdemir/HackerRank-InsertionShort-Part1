@@ -10,11 +10,12 @@ public class Solution {
 
     // Complete the insertionSort1 function below.
     static void insertionSort1(int n, int[] arr) {
-
-            int temp = arr[n-1];
+        
+            int temp = arr[n-1]; //son elemanı al
             for(int i = n-1; i > 0; i--){
+                //son eleman key olarak elimde ters loop elemanları ile karsılastır. Temp (key) kücük ise
                 if(arr[i-1] > temp){
-                    arr[i] = arr[i-1];
+                    arr[i] = arr[i-1]; // eleman ı sola kaydır(shift)
                     printArr(arr);
                 }else if(arr[i-1] < temp){
                     arr[i] = temp;
@@ -22,6 +23,7 @@ public class Solution {
                     return;
                 }
             }
+        //son elemandan loop a basladıgımız için ilk elemanı kontrol etmemiz gerekir.
             if(arr[0] > temp){
                 arr[0] = temp;
                 printArr(arr);
